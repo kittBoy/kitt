@@ -1,0 +1,44 @@
+{
+  "name": "kitt-js",
+  "version": "0.0.1",
+  "description": "轻量级JS开发框架",
+  "author": "王鹏",
+  "email": "786601349@qq.com",
+  "main": "index.js",
+  "dependencies": {
+    "body-parser": "^1.15.1",
+    "caller-id": "^0.1.0",
+    "cloudinary": "^1.3.1",
+    "compression": "^1.6.1",
+    "connect-flash": "^0.1.1",
+    "cookie-parser": "^1.4.1",
+    "express": "^4.13.4",
+    "express-session": "^1.13.0",
+    "grappling-hook": "^3.0.0",
+    "i": "^0.3.5",
+    "jade": "^1.11.0",
+    "less-middleware": "^2.1.0",
+    "lodash": "^4.11.2",
+    "method-override": "^2.3.5",
+    "mongodb": "^2.1.18",
+    "morgan": "^1.7.0",
+    "multer": "^1.1.0",
+    "object-assign": "^4.1.0",
+    "orm": "^3.0.0",
+    "randomkey": "^1.0.0",
+    "react": "^15.0.2",
+    "react-dom": "^15.0.2",
+    "react-router": "^2.4.0",
+    "scmp": "^1.0.0",
+    "serve-favicon": "^2.3.0",
+    "slug": "^0.9.1",
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kittBoy/kitt.git"
+  },
+  "license": "MIT"
+
+}

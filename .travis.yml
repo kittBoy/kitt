@@ -1,0 +1,10 @@
+language: node_js
+node_js:
+- "0.12"
+
+notifications:
+  email:
+    - 786601349@qq.com
+
+services:
+  - mongodb
