@@ -12,7 +12,7 @@ module.exports = function openDatabaseConnection (callback) {
         port:     this.get('db').port,
         query:    {pool: true,debug: true}
     };
-     orm.connect('mongodb://localhost/keystone-demo', function(err,db) {
+     orm.connect('mongodb://localhost/kitt-demo', function(err,db) {
         if (err){
             if (kitt.get('logger')) {
                 console.log('------------------------------------------------');

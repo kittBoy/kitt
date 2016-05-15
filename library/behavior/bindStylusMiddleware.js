@@ -1,9 +1,9 @@
-module.exports = function bindStylusMiddleware (keystone, app) {
+module.exports = function bindStylusMiddleware (kitt, app) {
 	// the stylus option can be a single path, or array of paths
 	// when set, we configure the stylus middleware
-	var stylusPaths = keystone.get('stylus');
-	var stylusOptions = keystone.get('stylus options') || {};
-	var debug = require('debug')('keystone:core:bindStylusMiddleware');
+	var stylusPaths = kitt.get('stylus');
+	var stylusOptions = kitt.get('stylus options') || {};
+	var debug = require('debug')('kitt:core:bindStylusMiddleware');
 	var _ = require('lodash');
 
 	if (typeof stylusPaths === 'string') {
@@ -29,9 +29,9 @@ module.exports = function bindStylusMiddleware (keystone, app) {
 		}
 		stylusPaths.forEach(function (path) {
 			app.use(stylusMiddleware(_.extend({
-				src: keystone.expandPath(path),
-				dest: keystone.expandPath(path),
-				compress: keystone.get('env') === 'production',
+				src: kitt.expandPath(path),
+				dest: kitt.expandPath(path),
+				compress: kitt.get('env') === 'production',
 			}, stylusOptions)));
 		});
 	}

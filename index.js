@@ -121,12 +121,11 @@ kitt.security = {
 };
 
 /**
- * returns all .js modules (recursively) in the path specified, relative
- * to the module root (where the keystone project is being consumed from).
+ * 导入客户端models
  *
  * ####Example:
  *
- *     var models = keystone.import('models');
+ *     var models = kitt.import('models');
  *
  * @param {String} dirname
  * @api public

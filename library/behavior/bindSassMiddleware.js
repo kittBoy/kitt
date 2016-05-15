@@ -1,10 +1,10 @@
-module.exports = function bindSassMiddleware (keystone, app) {
+module.exports = function bindSassMiddleware (kitt, app) {
 	// the sass option can be a single path, or array of paths
 	// when set, we configure the node-sass middleware
 
-	var sassPaths = keystone.get('sass');
-	var sassOptions = keystone.get('sass options') || {};
-	var debug = require('debug')('keystone:core:bindSassMiddleware');
+	var sassPaths = kitt.get('sass');
+	var sassOptions = kitt.get('sass options') || {};
+	var debug = require('debug')('kitt:core:bindSassMiddleware');
 	var _ = require('lodash');
 
 	if (typeof sassPaths === 'string') {
@@ -28,11 +28,11 @@ module.exports = function bindSassMiddleware (keystone, app) {
 				throw e;
 			}
 		}
-		var outputStyle = keystone.get('env') === 'production' ? 'compressed' : 'nested';
+		var outputStyle = kitt.get('env') === 'production' ? 'compressed' : 'nested';
 		sassPaths.forEach(function (path) {
 			app.use(sassMiddleware(_.extend({
-				src: keystone.expandPath(path),
-				dest: keystone.expandPath(path),
+				src: kitt.expandPath(path),
+				dest: kitt.expandPath(path),
 				outputStyle: outputStyle,
 			}, sassOptions)));
 		});

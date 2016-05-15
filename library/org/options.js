@@ -50,7 +50,7 @@ exports.set = function (key, value) {
 /**
  *
  * 例子:
- *     keystone.options({test: value}) // sets the 'test' option to `value`
+ *     kitt.options({test: value}) // sets the 'test' option to `value`
  */
 exports.options = function (options) {
     if (!arguments.length) {
@@ -73,7 +73,7 @@ exports.options = function (options) {
  * 获取选项
  *
  * 例如:
- *     keystone.get('test') // returns the 'test' value
+ *     kitt.get('test') // returns the 'test' value
  */
 exports.get = exports.set;
 
@@ -81,7 +81,7 @@ exports.get = exports.set;
  * 获取绝对路径
  *
  * Example:
- *     keystone.get('pathOption', 'defaultValue')
+ *     kitt.get('pathOption', 'defaultValue')
  */
 exports.getPath = function (key, defaultValue) {
     return this.expandPath(this.get(key) || defaultValue);
